@@ -1,48 +1,44 @@
-# Web Development Project 2 - Bioinformatics Flashcards
+# Web Development Project 3 - Bioinformatics Flashcards Part 2
 
 Submitted by: **Rolake**
 
-This web app: **A flashcard study app built with React that helps users learn bioinformatics terms. Users can flip cards to see answers and navigate through cards in random order.**
+This web app: **A flashcard study app built with React that helps users learn bioinformatics terms. Users can guess answers via a text input, navigate sequentially through cards, shuffle the deck, and track their correct-answer streak.**
 
-Time spent: **2.5** hours spent in total
+Time spent: **4.5** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **The app displays the title of the card set, a short description, and the total number of cards**
-  - [x] Title of card set is displayed
-  - [x] A short description of the card set is displayed
-  - [x] A list of card pairs is created
-  - [x] The total number of cards in the set is displayed
-- [x] **A single card at a time is displayed**
-  - [x] A single card is displayed at a time
-  - [x] Only one half of the information pair is displayed at a time
-  - [x] Clicking on the card flips it over, showing the back with corresponding information
-  - [x] Clicking on a flipped card again flips it back, showing the front
-- [x] **Clicking the next button displays a random new card**
+- [x] **The user can submit a guess into an input box before seeing the flipside of a card**
+  - [x] Application features a clearly labeled input box with a submit button where users can type in a guess
+  - [x] Clicking on the submit button with an incorrect answer shows visual feedback that it is wrong
+  - [x] Clicking on the submit button with a correct answer shows visual feedback that it is correct
+- [x] **The user can navigate through an ordered list of cards**
+  - [x] A forward/next button displayed on the card navigates to the next card in a set sequence when clicked
+  - [x] A previous/back button displayed on the card returns to the previous card in the set sequence when clicked
+  - [x] Both the next and back buttons have visual indication (graying out) when the user is at the beginning or end of the list, with no wrap-around navigation
 
 The following **optional** features are implemented:
 
-- [ ] Cards contain images in addition to or in place of text
-- [x] Cards have different visual styles such as color based on their category
-  - [x] Cards are colored based on category: basics (green), tools (blue), field (purple), advanced (orange)
-
-The following **additional** features are implemented:
-
-* A flip hint is shown at the bottom of each card telling users whether to click to see the question or answer
+- [x] Users can use a shuffle button to randomize the order of the cards
+  - [x] Cards remain in the same sequence unless the shuffle button is clicked
+- [x] A user's answer may be counted as correct even when it is slightly different from the target answer
+  - [x] Case and punctuation differences are ignored when checking answers
+- [x] A counter displays the user's current and longest streak of correct responses
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of displayed cards
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
 
-<img src='https://raw.githubusercontent.com/RolakeOkans/flashcards/main/flashcards_bioinformatics.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://raw.githubusercontent.com/RolakeOkans/flashcards/main/flashcard_bioinformatics_2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with Kap
 
 ## Notes
 
-Learning useState and how state updates trigger re-renders was the main challenge. Understanding how to use a boolean state variable to toggle between showing the question and answer on the card took some getting used to.
+Learning how to compare typed input against stored answers was tricky at first since exact string matching is very strict — adding lowercase conversion and punctuation stripping fixed that. Implementing the shuffle button using the Fisher-Yates algorithm on an array of indices was the most challenging part.
 
 ## License
 
