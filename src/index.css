@@ -109,3 +109,21 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+.streak-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #0d4a42;
+}
+
+.shuffle-button {
+  background-color: #6a5acd;
+  margin-top: 20px;
+}
+
+.shuffle-button:hover {
+  background-color: #836fff;
+}
